@@ -5,23 +5,23 @@ For a video demonstration of the entire Project click [here](www.youtube.com/uni
 ### Introduction
 
 This repository is composed of three different parts
-1) Electronics
-2) Mechanics
-3) Android App
+* Electronics
+* Mechanics
+* Android App
 
 Detailed explanaitions are listed in the following sections.
 
 ### Electronics
 In this folder you will find:
 
-##### 1) List of electronics used
+* List of electronics used
 This containes the parts used on the electrical side of things
 
-##### 2) Code
+* Code
 The Code for the project is written in Visual Studio Code in combination with PlatformIO.
 If you are more comfortable with the Android IDE you can open the file src/main.cpp with an editor of your choice and copy the code to a new Android project.
 
-##### 3) Pinout
+* Pinout
 This is just a document that tells you what pins should be soldered to which pins.
 
 ### Mechanics
