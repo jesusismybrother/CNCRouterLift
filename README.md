@@ -8,10 +8,7 @@ This repository is composed of three different parts
 * Electronics
 * Mechanics
 * Android App
-
-Also you will find a Bill of Material in the Main folder.
-This list is not complete and rather a guideline.
-
+ 
 ### Electronics
 In this folder you will find:
 
@@ -36,3 +33,40 @@ You can see it in Fusion360 with [this link](https://a360.co/2SwOq4j), but to ac
 ### Android App
 This folder containes the finished .apk for you to install on your android device.
 It also containes an archived version of the [MIT App Inventor](http://appinventor.mit.edu/) project used to create the app.
+
+### Other information
+
+#### BOM
+
+#### Electronics
+| Item            | Name          | Quantity | Note                                      |
+|-----------------|---------------|----------|-------------------------------------------|
+| Mikrocontroller | ESP32         | 1        | Cheap and has onboard Bluetooth           |
+| Stepper Motor   | 17HS4401      | 1        | Any Nema 17 steppermotor will do          |
+| Stepper Driver  | Timatic 2100  | 1        | Should be selected according to the Motor |
+| LCD             | 1604 with IC² | 1        | Make sure to select the one with IC²      |
+
+#### Mechanics
+
+| Item               | Name        | Quantity | Note                                                                                   |
+|--------------------|-------------|----------|----------------------------------------------------------------------------------------|
+| Bearings           | LM12UUOP    | 4        |                                                                                        |
+| Leadscrew Assembly | This one    | 1        | Pitch 1mm Lead 1mm 200mm long (Tell them to give you the correct couple for the Motor) |
+| Linear Rails       | SBR12 150mm | 1        |                                                                                        |
+#### Pinout
+
+| Pin | Destination             |
+|-----|-------------------------|
+| 4   | Button → "Unit"           |
+| 5   | Button → "Zero"           |
+| 12  | Stepper Driver → "Dir"    |
+| 14  | Stepper Driver → "Step"   |
+| 15  | Button → "Down"          |
+| 18  | Button → "Change"         |
+| 19  | Button → "Park"           |
+| 21  | LCD → SDA                 |
+| 22  | LCD → SCL                 |
+| 23  | Limit Switch            |
+| 27  | Button → "Up"             |
+| 32  | Stepper Driver → "Enable" |
+
