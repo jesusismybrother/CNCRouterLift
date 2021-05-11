@@ -1,0 +1,131 @@
+STEP translation to Solid Edge
+Date: Dienstag,Mai 11,2021 12:10
+Source File: C:\Users\z0041wnt\Git\CNCRouterLift\Router_lift_assembly.stp
+Author: Maximilian Palm
+Organization: Unknown
+Source System: Solid Edge
+
+Hardware:
+Processor: Intel(R) Core(TM) i5-7300U CPU @ 2.60GHz
+Operating System: Windows 10 Enterprise Edition
+Installed Memory: 7.88 GB
+
+Software Information
+Parasolid Version: 32.1.222
+PSBodyShop Version: 32.1.94
+Step Adapter Version: 5.0.107
+Solid Edge Version: 221.00.00.114 x64
+
+Step Import Options
+Import Faceted Bodies: On
+Import Check Bodies: Off
+Import Curves: On
+Import DoNotSave: On
+Import Multiple Bodies As Single Part File: On
+Import Stitch Surfaces: On
+Import Boolean Solids: On
+Make Base Feature: On
+Simplify Geometry: On
+Import Imprint Curves: On
+Import Drive: C:
+Import Stitch Surfaces: On
+Import Surfaces: On
+Import Output Path: C:\Users\z0041wnt\Git\CNCRouterLift
+Import Enable Default Output Path: On
+Import PMI: Off
+Import As Internal Components: Off
+Import Path: 
+
+Translating to Parasolid data types...
++Begin Assembly: 1
++Created SE Assembly File C:\Users\z0041wnt\Git\CNCRouterLift\Router_lift_assembly.asm
+|--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\Router mount print.par
+|--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\T8 Nut.par
+|--+Begin Assembly: 2
+|--+Created SE Assembly File C:\Users\z0041wnt\Git\CNCRouterLift\RT0700 v10.asm
+|  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\Component2_0.par
+|  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\Component3_0.par
+|  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\Component6.par
+|  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\Component7.par
+|  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\Component8.par
+|--+Total Parts: 10
+|--+Assemblies: 0
+|--+Solid Bodies: 10
+|--+Sheet Bodies: 0
+|--+End Assembly: 2
+|--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\LM12UU-OP2.par
+|--+Reusing File C:\Users\z0041wnt\Git\CNCRouterLift\LM12UU-OP2.par
+|--+Reusing File C:\Users\z0041wnt\Git\CNCRouterLift\LM12UU-OP2.par
+|--+Reusing File C:\Users\z0041wnt\Git\CNCRouterLift\LM12UU-OP2.par
+|--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\sbs12-150.par
+|--+Reusing File C:\Users\z0041wnt\Git\CNCRouterLift\sbs12-150.par
+|--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\KFL08.par
+|--+Reusing File C:\Users\z0041wnt\Git\CNCRouterLift\KFL08.par
+|--+Begin Assembly: 2
+|--+Created SE Assembly File C:\Users\z0041wnt\Git\CNCRouterLift\Flexible_Coupler_5to8mm2.asm
+Bodies: 0
+|  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\Component1.par
+Bodies: 0
+|  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\Component2.par
+|  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\Component3.par
+Bodies: 0
+|  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\Component4.par
+Bodies: 0
+|  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\Component5.par
+|--+Total Parts: 6
+|--+Assemblies: 0
+|--+Solid Bodies: 6
+|--+Sheet Bodies: 0
+|--+End Assembly: 2
+|--+Begin Assembly: 2
+|--+Created SE Assembly File C:\Users\z0041wnt\Git\CNCRouterLift\Nema_17-17HS4401_1.asm
+|  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\Frontplate.par
+|  |--+Begin Assembly: 3
+|  |--+Created SE Assembly File C:\Users\z0041wnt\Git\CNCRouterLift\Screws.asm
+|  |  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\M3x30-Screw_001.par
+|  |  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\M3x30-Screw_002.par
+|  |  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\M3x30-Screw_003.par
+|  |  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\M3x30-Screw_004.par
+|  |--+Total Parts: 8
+|  |--+Assemblies: 0
+|  |--+Solid Bodies: 8
+|  |--+Sheet Bodies: 0
+|  |--+End Assembly: 3
+|  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\ConnectrorBody.par
+|  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\PCB.par
+|  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\Insulation.par
+|  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\Stator.par
+|  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\Baseplate.par
+|  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\BallBearing1.par
+|  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\BallBearing2.par
+|  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\Axis&Rotor.par
+|  |--+Begin Assembly: 3
+|  |--+Created SE Assembly File C:\Users\z0041wnt\Git\CNCRouterLift\ConnectorPins.asm
+|  |  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\SOLID.par
+|  |  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\SOLID001.par
+|  |  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\SOLID002.par
+|  |  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\SOLID003.par
+|  |  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\SOLID004.par
+|  |  |--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\SOLID005.par
+|  |--+Total Parts: 12
+|  |--+Assemblies: 0
+|  |--+Solid Bodies: 12
+|  |--+Sheet Bodies: 0
+|  |--+End Assembly: 3
+|--+Total Parts: 20
+|--+Assemblies: 2
+|--+Solid Bodies: 18
+|--+Sheet Bodies: 0
+|--+End Assembly: 2
+|--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\Trapezoidal lead screw tr8x8-4.par
+|--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\bearing_mount.par
+|--+Reusing File C:\Users\z0041wnt\Git\CNCRouterLift\bearing_mount.par
+|--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\Motor_mount.par
+|--+Created SE Part File C:\Users\z0041wnt\Git\CNCRouterLift\back_board.par
++Total Parts: 27
++Assemblies: 3
++Solid Bodies: 24
++Sheet Bodies: 0
++End Assembly: 1
+Translation process completed
+Total time required to translate and post process:00 : 00 : 40
