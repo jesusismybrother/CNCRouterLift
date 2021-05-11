@@ -39,20 +39,19 @@ It also containes an archived version of the [MIT App Inventor](http://appinvent
 #### BOM
 
 #### Electronics
-| Item            | Name          | Quantity | Note                                      |
-|-----------------|---------------|----------|-------------------------------------------|
-| Mikrocontroller | ESP32         | 1        | Cheap and has onboard Bluetooth           |
-| Stepper Motor   | 17HS4401      | 1        | Any Nema 17 steppermotor will do          |
-| Stepper Driver  | Timatic 2100  | 1        | Should be selected according to the Motor |
-| LCD             | 1604 with IC² | 1        | Make sure to select the one with IC²      |
-
+| Item            | Name                                                                                                                                                                                                                                                                                                         | Quantity | Note                                      |
+|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|-------------------------------------------|
+| Mikrocontroller | [ESP32](https://www.aliexpress.com/item/1005001757645011.html?spm=a2g0o.productlist.0.0.5f4351a1LQTLjh&algo_pvid=fccc381f-b59c-4fb2-bcb3-861be3b7c831&algo_expid=fccc381f-b59c-4fb2-bcb3-861be3b7c831-0&btsid=2100bde716207352577692887ec1e6&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_)      | 1        | Cheap and has onboard Bluetooth           |
+| Stepper Motor   | [17HS4401](https://www.aliexpress.com/item/32591963406.html?spm=a2g0s.9042311.0.0.6b414c4di6SC9B)                                                                                                                                                                                                            | 1        | Any Nema 17 steppermotor will do          |
+| Stepper Driver  | [Timatic 2100](https://reprap.org/wiki/TMC2100)                                                                                                                                                                                                                                                              | 1        | Should be selected according to the Motor |
+| LCD             | [1604 with IC²](https://www.aliexpress.com/item/4000370284169.html?spm=a2g0o.productlist.0.0.52cf6c12EPFdrq&algo_pvid=ffb9654e-687d-4a5e-be7f-337257436c71&algo_expid=ffb9654e-687d-4a5e-be7f-337257436c71-0&btsid=0b0a182b16207329769032604ec805&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_) | 1        | Make sure to select the one with IC²      |
 #### Mechanics
 
 | Item               | Name        | Quantity | Note                                                                                   |
 |--------------------|-------------|----------|----------------------------------------------------------------------------------------|
-| Bearings           | LM12UUOP    | 4        |                                                                                        |
-| Leadscrew Assembly | This one    | 1        | Pitch 1mm Lead 1mm 200mm long (Tell them to give you the correct couple for the Motor) |
-| Linear Rails       | SBR12 150mm | 1        |                                                                                        |
+| Bearings           | [LM12UUOP](https://www.aliexpress.com/item/32777334438.html?spm=a2g0s.9042311.0.0.6b414c4di6SC9B)    | 4        |                                                                                        |
+| Leadscrew Assembly | [This one](https://www.aliexpress.com/item/32599716891.html?spm=a2g0s.9042311.0.0.6b414c4di6SC9B)    | 1        | Pitch 1mm Lead 1mm 200mm long (Tell them to give you the correct couple for the Motor) |
+| Linear Rails       | [SBR12 150mm](https://www.aliexpress.com/item/1005001571893671.html?spm=a2g0o.productlist.0.0.2c9c61b6QjXSjZ&algo_pvid=null&algo_expid=null&btsid=2100bdf116207326987664173e79fd&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_) | 1        |                                                                                        |
 #### Pinout
 
 | Pin | Destination             |
