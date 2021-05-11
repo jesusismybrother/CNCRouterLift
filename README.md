@@ -9,13 +9,11 @@ This repository is composed of three different parts
 * Mechanics
 * Android App
 
-Detailed explanaitions are listed in the following sections.
+Also you will find a Bill of Material in the Main folder.
+This list is not complete and rather a guideline.
 
 ### Electronics
 In this folder you will find:
-
-* List of electronics used
-This containes the parts used on the electrical side of things
 
 * Code
 The Code for the project is written in Visual Studio Code in combination with PlatformIO.
@@ -33,7 +31,7 @@ You can see it in Fusion360 with [this link](https://a360.co/2SwOq4j), but to ac
 
 [Here is a Tutorial on how to do it.](https://knowledge.autodesk.com/support/fusion-360/learn-explore/caas/sfdcarticles/sfdcarticles/How-to-import-or-open-a-file-in-Autodesk-Fusion-360.html)
 
-You will also find a document with a list of mechanical parts used in the project.
+
 
 ### Android App
 This folder containes the finished .apk for you to install on your android device.
