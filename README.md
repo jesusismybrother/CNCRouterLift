@@ -5,19 +5,18 @@ For a video demonstration of the entire Project click [here](www.youtube.com/uni
 ### Introduction
 
 This repository is composed of three different parts
-* Electronics
+* ESP32 Code
 * Mechanics
 * Android App
  
-### Electronics
-In this folder you will find:
+### ESP32 Code
+In this folder you will find the Code for the project.
 
-* Code
-The Code for the project is written in Visual Studio Code in combination with PlatformIO.
-If you are more comfortable with the Android IDE you can open the file src/main.cpp with an editor of your choice and copy the code to a new Android project.
+It is written in Visual Studio Code in combination with PlatformIO.
 
-* Pinout
-This is just a document that tells you what pins should be soldered to which pins.
+If you are more comfortable with the Android IDE I also provided an Arduino project. In theory it should work exactly the same, i have not testet it tough.
+
+
 
 ### Mechanics
 
@@ -69,3 +68,5 @@ It also containes an archived version of the [MIT App Inventor](http://appinvent
 | 27  | Button → "Up"             |
 | 32  | Stepper Driver → "Enable" |
 
+All Buttons beside the Limit Switch are wired to ground.
+The limit switch is wired to 5V+

@@ -39,6 +39,26 @@ char currChar;
 int charcounter = 0;
 long BTdelay = millis();
 bool connected;
+long BTsendtimer = millis();
+
+String getValue(String data, char separator, int index)
+{
+	int found = 0;
+	int strIndex[] = {0, -1};
+	int maxIndex = data.length() - 1;
+
+	for (int i = 0; i <= maxIndex && found <= index; i++)
+	{
+		if (data.charAt(i) == separator || i == maxIndex)
+		{
+			found++;
+			strIndex[0] = strIndex[1] + 1;
+			strIndex[1] = (i == maxIndex) ? i + 1 : i;
+		}
+	}
+
+	return found > index ? data.substring(strIndex[0], strIndex[1]) : "";
+}
 
 bool limit_switch_read()
 {
@@ -80,7 +100,6 @@ void write_position()
 		lcd.setCursor(13, 1);
 		lcd.print(display_pos);
 	}
-
 }
 
 void write_absolute()
@@ -115,10 +134,18 @@ void write_absolute()
 
 void sendBTdata()
 {
-	String TxStr = String(abs_pos)+","+String(curr_pos);
-	SerialBT.println(TxStr);
-	delay(250);
+	if (millis() - BTsendtimer >= 250)
+	{
+		//long start = millis();
+		String TxStr = "";
+		TxStr = String(abs_pos) + "|" + String(curr_pos) + "|Idle";
+		SerialBT.println(TxStr);
+		//Serial.println(TxStr);
+		//Serial.println("Time needed to send BT command: " + String(millis() - start));
+		BTsendtimer = millis();
+	}
 }
+
 boolean move_motor(float distance)
 {
 
@@ -141,6 +168,12 @@ boolean move_motor(float distance)
 
 		Serial.print("Move motor by: ");
 		Serial.println(distance);
+
+		String TxStr = "";
+		TxStr = String(abs_pos) + "|" + String(curr_pos) + "|Move motor by: " + String(distance);
+		SerialBT.println(TxStr);
+		Serial.println(TxStr);
+
 		//stepper.move(req_distance);
 		stepper.startMove(req_distance);
 
@@ -177,7 +210,6 @@ boolean move_motor(float distance)
 	lcd.print("                ");
 	write_position();
 	write_absolute();
-	sendBTdata();
 
 	return (answere);
 }
@@ -221,7 +253,10 @@ void homing()
 	delay(50);
 	lcd.setCursor(0, 3);
 	lcd.print("Homing");
-
+	String TxStr = "";
+	TxStr = String(abs_pos) + "|" + String(curr_pos) + "|Homing";
+	SerialBT.println(TxStr);
+	Serial.println(TxStr);
 	long i = 0;
 	float moved_distance = 0;
 	//move once towards stop
@@ -267,7 +302,6 @@ void homing()
 	lcd.print("                 ");
 	write_position();
 	write_absolute();
-	sendBTdata();
 	digitalWrite(stepp_enable, HIGH);
 	delay(50);
 }
@@ -278,7 +312,10 @@ void zero_tool()
 	delay(50);
 	lcd.setCursor(0, 3);
 	lcd.print("Zero Tool");
-
+	String TxStr = "";
+	TxStr = String(abs_pos) + "|" + String(curr_pos) + "|Zero Tool";
+	SerialBT.println(TxStr);
+	Serial.println(TxStr);
 	long i = 0;
 	float moved_distance = 0;
 	//move once towards stop
@@ -324,14 +361,14 @@ void zero_tool()
 	lcd.print("                 ");
 	write_position();
 	write_absolute();
-	sendBTdata();
 	digitalWrite(stepp_enable, HIGH);
 	delay(50);
 }
 
-void BluetoothCommand(char command[15])
+void BluetoothCommand(char Charcommand[15])
 {
-	if (String(command) == "home")
+	String command = getValue(String(Charcommand), ';', 0);
+	if (command == "home")
 	{
 		Serial.println("Homing");
 		if (!limit_switch_read())
@@ -343,20 +380,45 @@ void BluetoothCommand(char command[15])
 			homing();
 		}
 	}
-	else if (String(command) == "zero")
+	else if (command == "zero")
 	{
+
 		Serial.println("Zero tool");
 		zero_tool();
 	}
-	else if (String(command) == "park")
+	else if (command == "park")
 	{
+		String TxStr = "";
+		TxStr = String(abs_pos) + "|" + String(curr_pos) + "|Parking";
+		SerialBT.println(TxStr);
+		Serial.println(TxStr);
 		Serial.println("Parking");
-		tool_change((-1*abs_pos)+5);
+		tool_change((-1 * abs_pos) + 5);
 	}
-	else if (String(command) == "change")
+	else if (command == "change")
 	{
+		String TxStr = "";
+		TxStr = String(abs_pos) + "|" + String(curr_pos) + "|Change Tool";
+		SerialBT.println(TxStr);
+		Serial.println(TxStr);
 		Serial.println("Change tool");
 		tool_change(abs_limit - abs_pos);
+	}
+	else if (command == "pos")
+	{
+		float tempposition;
+		tempposition = getValue(String(Charcommand), ';', 1).toFloat();
+		Serial.print("Toolpos: ");
+		Serial.println(tempposition);
+		move_motor(tempposition-curr_pos);
+	}
+	else if (command == "abs")
+	{
+		float tempposition ;
+		tempposition = getValue(String(Charcommand), ';', 1).toFloat();
+		Serial.print("Abspos: ");
+		Serial.println(tempposition);
+		move_motor(tempposition-abs_pos);
 	}
 
 	else
@@ -551,7 +613,7 @@ void loop()
 				RcvMsg[charcounter] = currChar;
 				charcounter++;
 			}
-			Serial.println(RcvMsg);
+			//Serial.println(RcvMsg);
 		}
 
 		//		for (int j; j <= 15; j++)
@@ -562,4 +624,6 @@ void loop()
 
 		BTdelay = millis();
 	}
+
+	sendBTdata();
 }
